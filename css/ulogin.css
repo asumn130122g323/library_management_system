@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Container */
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../images/alogin.jpg") no-repeat center center/cover;
+    background-color: #021635;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Form Container */
+.form-container {
+    padding: 24px;
+    border-radius: 16px;
+    border: solid 5px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.2);
+    color: rgb(236, 231, 231);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Title */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+/* Input Field */
+.field {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Input Box */
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    color: rgb(214, 211, 211);
+    transition: 0.25s;
+    box-sizing: border-box;
+}
+
+/* Input Focus Effect */
+.field input:focus,
+.field select:focus {
+    border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Floating Label Effect */
+.field label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+    pointer-events: none;
+    font-size: 14px;
+}
+.field select option {
+    top: 5px;
+    font-size: 12px;
+    color: rgb(22, 22, 22);
+}
+
+/* Animate Label on Input Focus */
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 12px;
+    color: rgb(22, 22, 22);
+}
+
+/* Buttons */
+.login-btn, .signup-btn {
+    width: 100%;
+    padding: 12px;
+    background: #32CDD5;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background: #2bb7be;
+}
+
+/* Bottom Links */
+.bottom {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.bottom a {
+    color: #32CDD5;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bottom a:hover {
+    text-decoration: underline;
+}

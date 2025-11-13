@@ -1,0 +1,77 @@
+body{
+    background: url("../images/alogin.jpg") no-repeat center center/cover;
+    background-color: #350202;
+}
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 24px;
+    border-radius: 16px;
+    border: solid 5px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.field {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.field input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    color: white;
+    transition: 0.25s;
+    box-sizing: border-box;
+}
+
+.field input:focus {
+    border: solid 2px rgba(255, 255, 255, 0.5);
+}
+.field input:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #32CDD5;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.login-btn:hover {
+    background: #2bb7be;
+}

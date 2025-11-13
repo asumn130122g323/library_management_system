@@ -1,0 +1,75 @@
+/* upload.css
+body {
+    font-family: "Baloo Bhai 2";
+    background: #0256aa;
+    /* background: url("../images/alibrarybg.jpg") no-repeat center center/cover; 
+    min-height: 100vh;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.upload-form {
+    background: rgba(50, 50, 50, 0.7); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.upload-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+}
+
+.upload-form input,
+.upload-form textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    display: block;
+}
+
+.upload-form input::placeholder,
+.upload-form textarea::placeholder {
+    color: #bbb;
+}
+
+.upload-form button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-form button:hover {
+    background: #45a049;
+}
+
+.success-message {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 15px;
+} */

@@ -1,0 +1,297 @@
+:root {
+  --primary-color: #356aff;
+  --bg-color: #111116;
+  --card-bg: #1c1b20;
+  --text-color: #fff;
+  --light-text-color: #58575c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    background-image: url("translate/anime-boy-dark-boruto-a4qxpdexkxf4sna9.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+
+  }
+  /* Existing styles remain unchanged */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(17, 17, 22, 0.5); /* Light overlay */
+  z-index: -1;
+}
+
+body.dark {
+  --bg-color: #111116;
+  --light-bg-color: #1c1b20;
+  --text-color: #fff;
+  --light-text-color: #58575c;
+}
+
+body.dark::before {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for dark mode */
+}
+
+.container {
+  background-color: rgba(17, 17, 22, 0.8); /* Slight transparency for the container */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  gap: 10px;
+}
+
+body.dark .container {
+  background-color: rgba(17, 17, 22, 0.8); /* Dark background for dark mode */
+}
+
+/* Add a subtle light effect to the cards */
+.container .card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--card-bg);
+}
+
+body.dark .container .card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+  .container .card .from,
+  .container .card .to {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .container .card .from {
+    margin-right: 20px;
+  }
+  
+  .container .card .to {
+    margin-left: 20px;
+  }
+  
+  .container .card .heading {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--light-text-color);
+    white-space: nowrap;
+  }
+  
+  .dropdown-container {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .dropdown-container .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 30px;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+  }
+  
+  .dropdown-container .dropdown-toggle ion-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown-container .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    padding: 20px;
+    z-index: 1;
+    list-style: none;
+    background-color: var(--bg-color);
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .dropdown-container .dropdown-menu::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .dropdown-container .dropdown-menu::-webkit-scrollbar-track {
+    background: var(--light-bg-color);
+  }
+  
+  .dropdown-container .dropdown-menu::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  .dropdown-container .dropdown-menu li {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-container .dropdown-menu li:hover {
+    background-color: var(--light-bg-color);
+  }
+  
+  .container textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 18px;
+  }
+  
+  .container .text-area {
+    position: relative;
+  }
+  
+  .container .text-area .chars {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 0.8rem;
+    color: var(--light-text-color);
+  }
+  
+  .container .center {
+    position: relative;
+  }
+  
+  .swap-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 5px solid var(--bg-color);
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+  }
+  
+  .swap-position ion-icon {
+    font-size: 25px;
+  }
+  
+  .swap-position:hover {
+    transform: translateX(-50%) scale(1.1);
+  }
+  
+  .card-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 2px solid var(--bg-color);
+  }
+  
+  .card-bottom p {
+    margin-bottom: 20px;
+  }
+  
+  .card-bottom .file-label,
+  .card-bottom button {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    border-radius: 30px;
+    background-color: var(--bg-color);
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .card-bottom .file-label:hover,
+  .card-bottom button:hover {
+    color: var(--primary-text-color);
+    background-color: var(--primary-color);
+  }
+  
+  .mode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+  }
+   
+  @media (max-width: 800px) {
+    .container {
+      width: 100%;
+      margin-top: 20px;
+      flex-direction: column;
+    }
+    .container .card {
+      width: 100%;
+    }
+    .container .card .from {
+      margin-right: 0;
+    }
+    .container .card .to {
+      margin-left: 0;
+    }
+    .container .card .from,
+    .container .card .to {
+      flex-direction: column;
+    }
+  
+    .swap-position {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .swap-position:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    .swap-position ion-icon {
+      transform: rotate(90deg);
+    }
+  }

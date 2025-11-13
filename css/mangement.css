@@ -1,0 +1,101 @@
+/* Dark background adjustments */
+body {
+    background-color: #333; /* Dark background for the page */
+    color: #f5f5f5; /* Light text color for contrast */
+    background: url("../images/alibrarybg.jpg") no-repeat center center/cover;
+}
+
+/* Header and H1 Styling */
+header, h1 {
+    color: #fff; /* White text for visibility on dark background */
+}
+
+/* Search bar styling */
+header input, #searchInput {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    border: 2px solid #0077cc; /* Lighter blue border for contrast */
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #444; /* Dark background for input */
+    color: #fff; /* White text for contrast */
+    margin-right: 10px; /* Space between input and button */
+}
+
+header input:focus, #searchInput:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #00aaff; /* Lighter blue focus border */
+}
+
+/* Search bar container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Search button styling */
+button {
+    padding: 12px 20px;
+    background-color: #005bb5; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0077cc; /* Lighter blue on hover */
+}
+
+/* Button active effect */
+button:active {
+    background-color: #004d99; /* Even darker blue on click */
+}
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+    border: 1px solid #444; /* Darker border to match dark theme */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header styling */
+th {
+    background-color: #005bb5; /* Dark blue background */
+    color: white; /* White text */
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Table cell styling */
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #555; /* Lighter gray border */
+}
+
+/* Table row hover effect */
+tr:hover {
+    background-color: #555; /* Lighter gray hover effect */
+}
+
+/* Alternate row color */
+tr:nth-child(even) {
+    background-color: #444; /* Slightly darker rows */
+}
+
+/* Additional spacing */
+table {
+    border: 1px solid #444; /* Ensure the border matches the table's dark theme */
+}

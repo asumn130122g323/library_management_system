@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Search Input */
+header input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #005bb5;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Back to Index */
+.back-to-index {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: #005bb5;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.back-to-index:hover {
+    background-color: #003d80;
+}
+
+/* Audiobooks Section */
+#audiobooks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));  /* Adjusted min width */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Flip Card */
+.flip-card {
+    background-color: transparent;
+    width: 90%;  /* Reduced width to make the container shorter */
+    max-width: 300px;  /* Added max-width for control */
+    height: 300px;  /* Height remains the same */
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;  /* Prevents overflow */
+}
+
+.flip-card-front {
+    background: white;
+    padding: 15px;  /* Reduced padding */
+}
+
+.flip-card-front img {
+    width: 100%;  /* Ensure image width fits the container */
+    height: 100%;  /* Ensure image height fits the container */
+    object-fit: contain;  /* Ensures the full image is visible */
+    max-width: 100%;  /* Prevents stretching */
+    max-height: 100%;  /* Prevents stretching */
+    border-radius: 5px;
+}
+
+.flip-card-back {
+    background: #0073e6;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 15px;  /* Reduced padding */
+}
+
+/* Audio Controls */
+audio {
+    width: 80%;  /* Reduced width */
+}
+
+/* Download Button */
+.flip-card-back a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 12px;  /* Reduced padding */
+    background: #ff3300;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.flip-card-back a:hover {
+    background: #cc2900;
+}
+/* Footer */
+footer {
+    margin-top: 50%;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    box-shadow: 0 0 15px #ff3300;
+}
+
+footer p {
+    margin: 5px 0;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    #audiobooks {
+        grid-template-columns: 1fr;
+    }
+    .flip-card {
+        height: 280px;  /* Adjusted height for small screens */
+        width: 90%;  /* Ensured it remains responsive */
+        max-width: 260px;  /* Adjusted max-width for smaller screens */
+    }
+}
